@@ -102,3 +102,21 @@ a:hover {
     justify-content: center;
     align-items: center;
 }
+
+.invalid_label {
+    color: red;
+}
+.invalid_input {
+    border: solid 1px;
+    border-color: red;
+    margin-bottom: 0 !important;
+}
+.invalid_text {
+    display: flex;
+    color: red;
+
+}
+.valid_test {
+    display: none;
+}
+
