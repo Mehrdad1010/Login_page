@@ -91,7 +91,7 @@ function check_data(NewUser) {
     return { inputIsValid, check_true }
 }
 
-function user_check(NewUser) {
+function user_check(NewUser, password) {
 
 
 
@@ -105,7 +105,7 @@ function user_check(NewUser) {
 
         const user_detect = jsonData.filter(users => users.username === userInput)
 
-        if (NewUser["password"] === user_detect[0]["password"]) {
+        if (NewUser[password] === user_detect[0][password]) {
             new_jsonData = jsonData.map((user) => {
                 if (user.username == userInput) {
                     user.isLoggedIn = true

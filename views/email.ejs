@@ -10,20 +10,20 @@
     <div class="main">
         <h1>Sign In</h1>
 
-        <form action="/islogin" method="post">
+        <form action="/isloginE" method="post">
             <label for="username">
                 Username:
             </label>
             <input type="text" id="username" name="username" 
                 placeholder="Enter your Username" required>
 
-            <label for="password">
-                Password:
+            <label for="email">
+                Email:
             </label>
-            <input type="password" id="password" name="password" 
-                placeholder="Enter your Password" required>
+            <input type="text" id="email" name="email" 
+                placeholder="Enter your Email" required>
 
-            <p style="width: 100%; font-size: small;" class="<%= inputIsValid ? "invalid_text" : "valid_test"  %>" >Username or password in incorrect</p>
+            <p style="width: 100%; font-size: small;" class="<%= inputIsValid ? "invalid_text" : "valid_test"  %>" >Username or Email in incorrect</p>
 
             <div class="wrap">
                 <button type="submit">
@@ -37,9 +37,9 @@
                 Create an account
             </a>
         </p>
-        <p style="font-size: small;display: flex; justify-self: start;">Forget Password?
-            <a href="/email" style="text-decoration: none;">
-                try with email
+        <p style="font-size: small;display: flex; justify-self: start;">Forget email?
+            <a href="/Login" style="text-decoration: none;">
+                try with password
             </a>
         </p>
     </div>

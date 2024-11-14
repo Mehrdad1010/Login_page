@@ -54,11 +54,27 @@ router.post("/update", (req, res) => {
     }
 })
 
+router.post("/isloginE", (req, res) => {
+    const User = req.body;
+
+    const check_user = tools.user_check(User, "email");
+
+   
+    if (check_user) {
+        const user_list = tools.find_user(User.username)
+        
+        res.render("personalPage", {username: user_list[0].username, email: user_list[0].email, Gender : user_list[0].Gnder})
+    }else {
+        var inputIsValid = true; 
+        res.render("Login", {inputIsValid})
+    }
+    
+})
 
 router.post("/islogin", (req, res) => {
     const User = req.body;
 
-    const check_user = tools.user_check(User);
+    const check_user = tools.user_check(User, "password");
 
    
     if (check_user) {
@@ -77,6 +93,11 @@ router.post("/logout", (req, res) => {
     
     var inputIsValid = false;
     res.render("Login", {inputIsValid})
+})
+
+router.get("/email", (req, res)=>{
+    var inputIsValid = false;
+    res.render("email", {inputIsValid})
 })
 
 
