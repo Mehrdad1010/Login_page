@@ -14,30 +14,26 @@
             <h1>Sign Up</h1>
             <hr>
 
-            <label for="username"  class ="<%= inputIsValid[0]? "invalid_label" : ""  %>">Username:</label>
-            <input  type="text"  placeholder="Enter Username"  name="username" class="<%= inputIsValid[0]? "invalid_input" : ""  %>" required>
-            <p style="width: 100%; font-size: small;" class="<%= inputIsValid[0]? "invalid_text" : "valid_test"  %>" >This user is befor SingUp</p>
-        
+            <label for="username" class="<%= inputIsValid[0]? " invalid_label" : "" %>">Username:</label>
+            <input type="text" placeholder="Enter Username" name="username" class="<%= inputIsValid[0]? " invalid_input": "" %>" required>
+            <p style="width: 100%; font-size: small;" class="<%= inputIsValid[0]? " invalid_text" : "valid_test" %>">This user is befor SingUp</p>
+            <label for="password" class="<%= inputIsValid[1]? " invalid_label" : "" %>">Password:</label>
+            <input type="password" placeholder="Enter Password" name="password" class="<%= inputIsValid[1]? "invalid_input" : "" %>" required>
+            <p style="width: 100%; font-size: small;" class="<%= inputIsValid[1]? " invalid_text" : "valid_test" %>">The Password shold be 8 carecter an have at last 1 word and 1 number</p>
+            <label for="email" class="<%= inputIsValid[2]? " invalid_label" : "" %> <%= inputIsValid[3]? "invalid_label" : "" %>">Email:</label>
+            <input type="text" placeholder="Enter Email" name="email" class="<%= inputIsValid[2]? " invalid_input" : "" %><%= inputIsValid[3]? "invalid_input" : "" %>" required>
+                <p style="width: 100%; font-size: small;" class="<%= inputIsValid[2]? " invalid_text" : "valid_test" %>">Please inter the correct address</p>
+                <P style="width: 100%; font-size: small;" class="<%= inputIsValid[3]? " invalid_text" : "valid_test" %>">you befor sing Up with this Email befor</P>
+                <label for="use">Gender:</label>
+                <select id="Gender" name="Gnder">
+                    <option value="Other">Other</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
 
-            <label for="password" class ="<%= inputIsValid[1]? "invalid_label" : ""  %>">Password:</label>
-            <input type="password" placeholder="Enter Password" name="password" class="<%= inputIsValid[1]? "invalid_input" : ""  %>" required>
-            <p  style="width: 100%; font-size: small;" class="<%= inputIsValid[1]? "invalid_text" : "valid_test"  %>" >The Password shold be 8 carecter an have at last 1 word and 1 number</p>
-
-            <label for="email"class ="<%= inputIsValid[2]? "invalid_label" : ""  %> <%= inputIsValid[3]? "invalid_label" : ""  %>">Email:</label>
-            <input type="text" placeholder="Enter Email" name="email" class="<%= inputIsValid[2]? "invalid_input" : ""  %> <%= inputIsValid[3]? "invalid_input" : ""  %>" required>
-            <p style="width: 100%; font-size: small;" class="<%= inputIsValid[2]? "invalid_text" : "valid_test"  %>" >Please inter the correct address</p>
-            <P style="width: 100%; font-size: small;" class="<%= inputIsValid[3]? "invalid_text" : "valid_test"  %>" >you befor sing Up with this Email befor</P>
-
-            <label for="use">Gender:</label>
-            <select id="Gender" name="Gnder" >
-                <option value="other">Other</option>
-                <option value="male">Mail</option>
-                <option value="female">Female</option>
-              </select>
-
-            <div class="clearfix">
-                <button type="submit" class="signupbtn">Sign Up</button>
-            </div>
+                <div class="clearfix">
+                    <button type="submit" class="signupbtn">Sign Up</button>
+                </div>
         </form>
         <p>Register befor?
             <a href="Login" style="text-decoration: none;">
